@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake Game</title>
+  <script src="SnakeGame.js"></script>
+  <link rel="stylesheet" href="OtherStyles.css">
+</head>
+<body>
+  <div id="GridContainer">
+    <div id="Leaderboard"> <h1>Leaderboard</h1>
+      <table>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Score</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>MarJR3</td>
+          <td>712</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>M'bele</td>
+          <td>492</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Creqy</td>
+          <td>490</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Banana_King</td>
+          <td>445</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>leyodz</td>
+          <td>430</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>+leftintheconsole</td>
+          <td>416</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Dimche_Shisha</td>
+          <td>337</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>AstroTons</td>
+          <td>314</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>DareWitDaHoodie</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Uk1iyo</td>
+          <td>2</td>
+        </tr>
+      </table></div>
+    <div id="Grid">
+      <div class="gridElement" id="0x0y"></div> <div class="gridElement" id="1x0y"></div> <div class="gridElement" id="2x0y"></div> <div id="3x0y" class="gridElement"></div> <div id="4x0y" class="gridElement"></div> <div id="5x0y" class="gridElement"></div> <div id="6x0y" class="gridElement"></div> <div id="7x0y" class="gridElement"></div>
+      <div class="gridElement" id="0x1y"></div> <div class="gridElement" id="1x1y"></div> <div class="gridElement" id="2x1y"></div> <div id="3x1y" class="gridElement"></div> <div id="4x1y" class="gridElement"></div> <div id="5x1y" class="gridElement"></div> <div id="6x1y" class="gridElement"></div> <div id="7x1y" class="gridElement"></div>
+      <div class="gridElement" id="0x2y"></div> <div class="gridElement" id="1x2y"></div> <div class="gridElement" id="2x2y"></div> <div id="3x2y" class="gridElement"></div> <div id="4x2y" class="gridElement"></div> <div id="5x2y" class="gridElement"></div> <div id="6x2y" class="gridElement"></div> <div id="7x2y" class="gridElement"></div>
+      <div class="gridElement" id="0x3y"></div> <div class="gridElement" id="1x3y"></div> <div class="gridElement" id="2x3y"></div> <div id="3x3y" class="gridElement"></div> <div id="4x3y" class="gridElement"></div> <div id="5x3y" class="gridElement"></div> <div id="6x3y" class="gridElement"></div> <div id="7x3y" class="gridElement"></div>
+      <div class="gridElement" id="0x4y"></div> <div class="gridElement" id="1x4y"></div> <div class="gridElement" id="2x4y"></div> <div id="3x4y" class="gridElement"></div> <div id="4x4y" class="gridElement"></div> <div id="5x4y" class="gridElement"></div> <div id="6x4y" class="gridElement"></div> <div id="7x4y" class="gridElement"></div>
+      <div class="gridElement" id="0x5y"></div> <div class="gridElement" id="1x5y"></div> <div class="gridElement" id="2x5y"></div> <div id="3x5y" class="gridElement"></div> <div id="4x5y" class="gridElement"></div> <div id="5x5y" class="gridElement"></div> <div id="6x5y" class="gridElement"></div> <div id="7x5y" class="gridElement"></div>
+      <div class="gridElement" id="0x6y"></div> <div class="gridElement" id="1x6y"></div> <div class="gridElement" id="2x6y"></div> <div id="3x6y" class="gridElement"></div> <div id="4x6y" class="gridElement"></div> <div id="5x6y" class="gridElement"></div> <div id="6x6y" class="gridElement"></div> <div id="7x6y" class="gridElement"></div>
+      <div class="gridElement" id="0x7y"></div> <div class="gridElement" id="1x7y"></div> <div class="gridElement" id="2x7y"></div> <div id="3x7y" class="gridElement"></div> <div id="4x7y" class="gridElement"></div> <div id="5x7y" class="gridElement"></div> <div id="6x7y" class="gridElement"></div> <div id="7x7y" class="gridElement"></div>
+    </div>
+    <div id="Timer"></div>
+    <div id="Score"><p>Your Score is: </p> <span id="ScoreNUM"></span> <p>Congratulations!</p></div>
+  </div>
+  <button id="Dugme" onclick="Nivo.generateEntities()">Start Game</button>
+  <div id="InitialControls">
+    <a id="UpArrow" onclick="Zmija.upArrowPressed()" class="ArrowContainer">&#8593;</a>
+    <a id="LeftArrow" class="ArrowContainer" onclick="Zmija.leftArrowPressed()">&#8592;</a> <a id="DownArrow" onclick="Zmija.downArrowPressed()" class="ArrowContainer">&darr;</a> <a onclick="Zmija.rightArrowPressed()" id="RightArrow" class="ArrowContainer">&rarr;</a>
+  </div>
+</body>
+</html>
