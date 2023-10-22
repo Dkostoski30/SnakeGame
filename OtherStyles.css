@@ -187,8 +187,8 @@ th, td {
     #ControlsContainer {
         display: grid;
         margin-top: 70px;
-        grid-template-rows: 96px 96px;
-        grid-template-columns: 96px 96px 96px;
+        grid-template-rows: 128px 128px;
+        grid-template-columns: 128px 128px 128px;
         gap: 25px;
     }
 
@@ -210,7 +210,7 @@ th, td {
         border-radius: 5px;
         user-select: none;
         border: 1px solid white;
-        font-size: 65px;
+        font-size: 105px;
         padding: 15px;
     }
 
@@ -223,7 +223,7 @@ th, td {
         border-radius: 5px;
         user-select: none;
         border: 1px solid white;
-        font-size: 65px;
+        font-size: 105px;
         padding: 15px;
     }
 
@@ -258,8 +258,8 @@ th, td {
     #Dugme:hover {
         cursor: pointer;
         background: #525d6c;
-        padding: 25px;
-        font-size: 40px;
+        padding: 45px;
+        font-size: 70px;
         border-radius: 10px;
         color: white;
         margin-top: 45px;
