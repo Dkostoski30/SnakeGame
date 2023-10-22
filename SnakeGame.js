@@ -45,30 +45,37 @@ class Zmija{
         }
     }
     naLevoDvizenje(){
-        this.deleteLast();
-        this.telo[this.telo.length-1]=this.glava;
         this.glava++;
         this.generate();
     }
     naDesnoDvizenje(){
-        this.deleteLast();
-        this.telo[this.telo.length-1]=this.glava;
         this.glava--;
         this.generate();
     }
     naDoluDvizenje(){
-        this.deleteLast();
-        this.telo[this.telo.length-1]=this.glava;
         this.glava=this.glava+8;
         this.generate();
     }
     naGoreDvizenje(){
-        this.deleteLast();
-        this.telo[this.telo.length-1]=this.glava;
         this.glava=this.glava-8;
         this.generate();
     }
     dvizi(){
+        this.deleteLast();
+        this.telo[this.telo.length-1]=this.glava;
+        if(this.orientacija===0){
+            this.naDoluDvizenje();
+        }else if(this.orientacija===1){
+            this.naLevoDvizenje();
+        }else if(this.orientacija===2){
+            this.naGoreDvizenje();
+        }else{
+            this.naDesnoDvizenje();
+        }
+    }
+    dviziAndZgolemi(){
+        //this.deleteLast();
+        this.telo.push(this.glava);
         if(this.orientacija===0){
             this.naDoluDvizenje();
         }else if(this.orientacija===1){
@@ -89,6 +96,12 @@ class Zmija{
         }else if(this.orientacija===3 &&(this.glava%8===0)){
             return true;
         }
+        for (let i = 0; i < this.telo.length; i++) {
+            if(this.glava === this.telo[i]){
+                return true;
+            }
+        }
+        return false;
     }
 }
 function delay(ms) {
@@ -125,7 +138,7 @@ class Nivo {
         Nivo.gridElements = document.querySelectorAll(".gridElement");
         const randomIndex = Math.floor(Math.random() * (Nivo.gridElements.length-4))+4;
         this.apple = new Apple(randomIndex);
-        this.snake = new Zmija(4, [0, 1, 2, 3]);
+        this.snake = new Zmija(2, [0, 1]);
         this.generateTiles();
         this.apple.generate();
         this.snake.generate();
@@ -133,9 +146,6 @@ class Nivo {
          startButton.style.display = "none";
          displayKeys();
          countdown().then(resolve => this.startGame());
-    }
-    static clearField(){
-
     }
     static gameOver(score){
          let displayScore = document.getElementById('Score');
@@ -165,15 +175,18 @@ class Nivo {
         })
         let x = 0;
         while (1) {
-            this.snake.dvizi();
+            if(this.snake.glava===this.apple.pos) {
+                x++;
+                let y = Math.floor(Math.random() * (Nivo.gridElements.length));
+                this.apple.generateRandom(y);
+                this.snake.dviziAndZgolemi();
+            }else{
+                this.snake.dvizi();
+            }
             await delay(200);
             if(this.snake.hasColided()){
                 this.gameOver(x);
                 break;
-            }if(this.snake.glava===this.apple.pos) {
-                x++;
-                let y = Math.floor(Math.random() * (Nivo.gridElements.length));
-                this.apple.generateRandom(y);
             }
         }
     }

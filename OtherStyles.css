@@ -182,4 +182,54 @@ th, td {
         flex-direction: column-reverse;
         align-items: center;
     }
+    #ControlsContainer{
+        display: grid;
+        margin-top: 60px;
+        grid-template-rows: 64px 64px;
+        grid-template-columns: 64px 64px 64px;
+        gap: 15px;
+    }
+    .ArrowContainer{
+        touch-action: manipulation;
+        user-drag: none;
+        user-select: none;
+        -ms-content-zooming: none;
+        -ms-touch-action: none;
+        zoom: reset;
+    }
+    .ArrowContainer:not(:active){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: #ff5d5d;
+        border-radius: 5px;
+        user-select: none;
+        border: 1px solid white;
+        font-size: 45px;
+    }
+    .ArrowContainer:hover{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        color: white;
+        background: #ff5d5d;
+        border-radius: 5px;
+        border: 1px solid white;
+        font-size: 45px;
+        cursor: pointer;
+    }
+    .ArrowContainer:active{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: #d25d5d;
+        border-radius: 5px;
+        user-select: none;
+        border: 1px solid white;
+        font-size: 45px;
+        transition: background-color 0.1s ease-in-out;
+    }
 }
