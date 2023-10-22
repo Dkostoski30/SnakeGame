@@ -47,7 +47,7 @@ body{
     display: grid;
     grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
     grid-template-rows: 64px 64px 64px 64px 64px 64px 64px 64px;
-    margin-left: -51px;
+
 }
 .gridElement{
     border: 0.5px solid rgba(255, 255, 255, 0.63);
@@ -61,6 +61,14 @@ body{
     grid-template-rows: 64px 64px;
     grid-template-columns: 64px 64px 64px;
     gap: 5px;
+}
+.ArrowContainer{
+    touch-action: manipulation;
+    user-drag: none;
+    user-select: none;
+    -ms-content-zooming: none;
+    -ms-touch-action: none;
+    zoom: reset;
 }
 .ArrowContainer:not(:active){
     display: flex;
@@ -96,6 +104,11 @@ body{
     border: 1px solid white;
     font-size: 25px;
     transition: background-color 0.1s ease-in-out;
+}
+#GridAndArrows{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #UpArrow{
     grid-column: 2/3;
@@ -162,4 +175,11 @@ th, td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+}
+@media screen and (max-width: 1000px){
+    #GridContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }
