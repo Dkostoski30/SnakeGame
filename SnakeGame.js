@@ -125,7 +125,7 @@ class Nivo {
         Nivo.gridElements = document.querySelectorAll(".gridElement");
         const randomIndex = Math.floor(Math.random() * (Nivo.gridElements.length-4))+4;
         this.apple = new Apple(randomIndex);
-        this.snake = new Zmija(6, [0, 1, 2, 3, 4, 5]);
+        this.snake = new Zmija(4, [0, 1, 2, 3]);
         this.generateTiles();
         this.apple.generate();
         this.snake.generate();
