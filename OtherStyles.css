@@ -268,4 +268,7 @@ th, td {
         -moz-box-shadow: 14px 16px 39px 0px rgba(0, 0, 0, 0.75);
         border: 2px solid white;
     }
+    #Leaderboard{
+        display: none;
+    }
 }
