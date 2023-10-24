@@ -1,4 +1,4 @@
-#Dugme:not(:hover){
+.Dugme:not(:hover){
     background: #ff5d5d;
     padding: 25px;
     font-size: 40px;
@@ -12,7 +12,7 @@
     box-sizing: content-box;
     transition: background 0.3s ease-in-out, border 0.1s ease-in-out;
 }
-#Dugme:hover{
+.Dugme:hover{
     cursor: pointer;
     background: #525d6c;
     padding: 25px;
@@ -33,6 +33,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 
 }
 #GridContainer{
@@ -240,7 +241,7 @@ th, td {
         padding: 15px;
     }
 
-    #Dugme:not(:hover) {
+    .Dugme:not(:hover) {
         background: #ff5d5d;
         padding: 45px;
         font-size: 70px;
@@ -255,7 +256,7 @@ th, td {
         transition: background 0.3s ease-in-out, border 0.1s ease-in-out;
     }
 
-    #Dugme:hover {
+    .Dugme:hover {
         cursor: pointer;
         background: #525d6c;
         padding: 25px;
@@ -271,4 +272,7 @@ th, td {
 }
 #GameOver{
     opacity: 0;
+}
+#tryAgain{
+    display: none;
 }

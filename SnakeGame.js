@@ -2,6 +2,11 @@ function displayKeys(){
     let x = document.getElementById("InitialControls");
     x.id="ControlsContainer";
 }
+document.addEventListener('keydown', function (event){
+    if(event.keyCode===13){
+        Nivo.startGame();
+    }
+})
 class Apple{
     constructor(pos) {
         this.pos=pos;
@@ -142,7 +147,7 @@ class Nivo {
         this.generateTiles();
         this.apple.generate();
         this.snake.generate();
-        let startButton=document.getElementById('Dugme');
+        let startButton=document.getElementById('Start');
          startButton.style.display = "none";
          displayKeys();
          countdown().then(resolve => this.startGame());
@@ -200,10 +205,13 @@ class Nivo {
             if(this.snake.hasColided()){
                 let gameover = document.getElementById('GameOver');
                 gameover.style.opacity = '100';
+                let tryAgain = document.getElementById('tryAgain');
+                tryAgain.style.display = 'block';
                 break;
             }
         }
     }
 }
-
-
+function refreshPage(){
+    location.reload();
+}
