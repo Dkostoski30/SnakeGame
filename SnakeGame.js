@@ -146,17 +146,29 @@ class Nivo {
          startButton.style.display = "none";
          displayKeys();
          countdown().then(resolve => this.startGame());
+
     }
-    static gameOver(score){
-         let displayScore = document.getElementById('Score');
-         displayScore.style.display = 'flex';
+    static updateScore(score){
          let y = document.getElementById('ScoreNUM');
          y.innerHTML = score;
-         let x = document.getElementById('Timer');
-         x.style.display = 'none'
     }
     static async startGame() {
+        let displayScore = document.getElementById('Score');
+        displayScore.style.display = 'flex';
+        let timer = document.getElementById('Timer');
+        timer.style.display = 'none'
         //let arrows = document.querySelectorAll('.ArrowContainer');
+        document.addEventListener('keydown', (event)=>{
+            if (event.key === 'ArrowLeft') {
+                this.snake.orientacija = 3;
+            } else if (event.key === 'ArrowRight') {
+                this.snake.orientacija = 1;
+            } else if (event.key === 'ArrowUp') {
+                this.snake.orientacija = 2;
+            } else if (event.key === 'ArrowDown') {
+                this.snake.orientacija = 0;
+            }
+        })
         let UpArrow = document.getElementById('UpArrow');
         UpArrow.addEventListener("click",()=>{
             this.snake.orientacija=2;
@@ -184,8 +196,10 @@ class Nivo {
                 this.snake.dvizi();
             }
             await delay(200);
+            this.updateScore(x);
             if(this.snake.hasColided()){
-                this.gameOver(x);
+                let gameover = document.getElementById('GameOver');
+                gameover.style.opacity = '100';
                 break;
             }
         }
