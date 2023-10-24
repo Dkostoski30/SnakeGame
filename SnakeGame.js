@@ -2,11 +2,7 @@ function displayKeys(){
     let x = document.getElementById("InitialControls");
     x.id="ControlsContainer";
 }
-document.addEventListener('keydown', function (event){
-    if(event.key==='Enter'){
-        Nivo.generateEntities();
-    }
-})
+
 class Apple{
     constructor(pos) {
         this.pos=pos;
