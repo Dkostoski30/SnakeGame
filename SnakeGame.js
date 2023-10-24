@@ -3,8 +3,8 @@ function displayKeys(){
     x.id="ControlsContainer";
 }
 document.addEventListener('keydown', function (event){
-    if(event.keyCode===13){
-        Nivo.startGame();
+    if(event.key==='Enter'){
+        Nivo.generateEntities();
     }
 })
 class Apple{
