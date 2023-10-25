@@ -160,13 +160,13 @@ class Nivo {
         timer.style.display = 'none'
         //let arrows = document.querySelectorAll('.ArrowContainer');
         document.addEventListener('keydown', (event)=>{
-            if (event.key === 'ArrowLeft') {
+            if (event.key === 'ArrowLeft' || event.key === "a" || event.key === "A") {
                 this.snake.orientacija = 3;
-            } else if (event.key === 'ArrowRight') {
+            } else if (event.key === 'ArrowRight' || event.key === "d" || event.key === "D") {
                 this.snake.orientacija = 1;
-            } else if (event.key === 'ArrowUp') {
+            } else if (event.key === 'ArrowUp' || event.key === "w" || event.key === "W") {
                 this.snake.orientacija = 2;
-            } else if (event.key === 'ArrowDown') {
+            } else if (event.key === 'ArrowDown' || event.key === "s" || event.key === "S") {
                 this.snake.orientacija = 0;
             }
         })
