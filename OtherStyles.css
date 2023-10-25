@@ -188,8 +188,8 @@ th, td {
     #ControlsContainer {
         display: grid;
         margin-top: 70px;
-        grid-template-rows: 96px 96px;
-        grid-template-columns: 96px 96px 96px;
+        grid-template-rows: 128px 128px;
+        grid-template-columns: 128px 128px 128px;
         gap: 25px;
     }
 
@@ -211,7 +211,7 @@ th, td {
         border-radius: 5px;
         user-select: none;
         border: 1px solid white;
-        font-size: 65px;
+        font-size: 106px;
         padding: 15px;
     }
 
@@ -224,7 +224,7 @@ th, td {
         border-radius: 5px;
         user-select: none;
         border: 1px solid white;
-        font-size: 65px;
+        font-size: 106px;
         padding: 15px;
     }
 
@@ -237,7 +237,7 @@ th, td {
         border-radius: 5px;
         user-select: none;
         border: 1px solid white;
-        font-size: 65px;
+        font-size: 106px;
         padding: 15px;
     }
 
