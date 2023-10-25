@@ -196,7 +196,7 @@ class Nivo {
             }else{
                 this.snake.dvizi();
             }
-            await delay(70);
+            await delay(120);
             this.updateScore(x);
             if(this.snake.hasColided()){
                 let gameover = document.getElementById('GameOver');
