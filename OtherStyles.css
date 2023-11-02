@@ -184,7 +184,9 @@ th, td {
         flex-direction: column-reverse;
         align-items: center;
     }
-
+    #Leaderboard{
+        display: none;
+    }
     #ControlsContainer {
         display: grid;
         margin-top: 70px;
